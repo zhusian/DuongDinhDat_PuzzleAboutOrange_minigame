@@ -136,7 +136,7 @@ public class GamePlay : MonoBehaviour
         Collider2D block = Physics2D.OverlapCircle(worldPos, 0.1f, LayerMask.GetMask("Block"));
         if (block != null)
         {
-            Debug.Log("Blocked by obstacle at " + cellPos);
+         //   Debug.Log("Blocked by obstacle at " + cellPos);
             return false;
         }
 
@@ -144,7 +144,7 @@ public class GamePlay : MonoBehaviour
         {
             if (piece.gridPosition == cellPos)
             {
-                Debug.Log("Occupied by another orange at " + cellPos);
+        //        Debug.Log("Occupied by another orange at " + cellPos);
                 return false;
             }
         }
@@ -171,7 +171,7 @@ public class GamePlay : MonoBehaviour
 
             int id = idCounter++;
             orangePieces.Add(new OrangePiece(orange, position, id));
-            Debug.Log($"Mảnh cam ID: {id} - Vị trí: {position}");
+         //   Debug.Log($"Mảnh cam ID: {id} - Vị trí: {position}");
         }
 
         foreach (var obstaclePosition in levelData.obstaclePositions)
@@ -191,7 +191,7 @@ public class GamePlay : MonoBehaviour
         if (piece1 == null || piece2 == null || piece3 == null || piece4 == null)
             return false;
 
-        Debug.Log($"P1: {piece1.gridPosition}, P2: {piece2.gridPosition}, P3: {piece3.gridPosition}, P4: {piece4.gridPosition}");
+       // Debug.Log($"P1: {piece1.gridPosition}, P2: {piece2.gridPosition}, P3: {piece3.gridPosition}, P4: {piece4.gridPosition}");
 
         bool isSquareInOrder = IsSquareFormation(piece1, piece2, piece3, piece4);
 
@@ -217,7 +217,7 @@ public class GamePlay : MonoBehaviour
         bool columnMatch42 = p4Pos.y == p2Pos.y;
         bool correctOrder = p3Pos.x < p1Pos.x && p4Pos.x < p2Pos.x;
 
-        Debug.Log($"RowMatch34: {rowMatch34}, RowMatch12: {rowMatch12}, ColumnMatch31: {columnMatch31}, ColumnMatch42: {columnMatch42}, CorrectOrder: {correctOrder}");
+       // Debug.Log($"RowMatch34: {rowMatch34}, RowMatch12: {rowMatch12}, ColumnMatch31: {columnMatch31}, ColumnMatch42: {columnMatch42}, CorrectOrder: {correctOrder}");
 
         return rowMatch34 && rowMatch12 && columnMatch31 && columnMatch42 && correctOrder;
     }
