@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ead2d9f7dbe8f0c4286c655003c62f7c, type: 3}
-  m_Name: Lv
+  m_Name: Lv2
   m_EditorClassIdentifier: 
-  levelName: Level 1
+  levelName: Level 2
+  levelNumber: 2
   rows: 4
   columns: 4
   timeLimit: 45
   watermelonPositions:
-  - {x: 0, y: 1}
-  - {x: 1, y: 3}
+  - {x: 0, y: 2}
+  - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 2}
   watermelonSprites:
@@ -27,5 +28,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c5946a6d660f735409d5409587bab1c9, type: 3}
   - {fileID: 21300000, guid: 8ee8d2871d9192649a19555eea8fc9c6, type: 3}
   obstaclePositions:
-  - {x: 2, y: 2}
+  - {x: 1, y: 3}
   obstacleSprite: {fileID: 21300000, guid: 7b8f1ec967a9cc74f8482fe6a752346a, type: 3}

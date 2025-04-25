@@ -6,6 +6,17 @@ public class ButtonManager : MonoBehaviour
     public void OnPlayButtonClicked()
     {
         SceneManager.LoadScene("Level");
-        Debug.Log("click");
+    }
+    public void OnHomeButtonClicked()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void OnRestartButtonClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void OnNextButtonClicked()
+    {
+        SceneManager.LoadScene("Level");
     }
 }
