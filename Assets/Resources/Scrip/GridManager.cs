@@ -55,6 +55,20 @@ public class GridManager : MonoBehaviour
         return gridCenter + new Vector3(xPos, yPos, 0f);
     }
 
+    // Chuyển đổi vị trí thế giới (world position) thành vị trí cell trong grid
+    public Vector2Int GetCellPosition(Vector3 worldPosition)
+    {
+        // Tính toán vị trí của cell dựa trên chỉ số hàng và cột
+        int x = Mathf.FloorToInt((worldPosition.x - transform.position.x + (columns * (cellWidth + cellSpacing)) / 2) / (cellWidth + cellSpacing));
+        int y = Mathf.FloorToInt((-(worldPosition.y - transform.position.y) + (rows * (cellHeight + cellSpacing)) / 2) / (cellHeight + cellSpacing));
+
+        // Đảm bảo rằng vị trí cell nằm trong phạm vi grid
+        x = Mathf.Clamp(x, 0, columns - 1);
+        y = Mathf.Clamp(y, 0, rows - 1);
+
+        return new Vector2Int(x, y);
+    }
+
     // Gỡ bỏ tất cả các cell trong grid
     public void ClearGrid()
     {

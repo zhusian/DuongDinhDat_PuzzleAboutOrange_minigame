@@ -22,8 +22,8 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 1, y: 2}
   watermelonSprites:
-  - {fileID: 21300000, guid: 4f937d671f5f1c843a1c06fbfc604650, type: 3}
   - {fileID: 21300000, guid: 1142f21340783d445ace85baf00d4f3c, type: 3}
+  - {fileID: 21300000, guid: 4f937d671f5f1c843a1c06fbfc604650, type: 3}
   - {fileID: 21300000, guid: c5946a6d660f735409d5409587bab1c9, type: 3}
   - {fileID: 21300000, guid: 8ee8d2871d9192649a19555eea8fc9c6, type: 3}
   obstaclePositions:
